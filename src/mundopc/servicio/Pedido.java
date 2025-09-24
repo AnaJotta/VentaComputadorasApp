@@ -4,14 +4,14 @@ import mundopc.modelo.Computadora;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orden {
-    private final int idOrden;
+public class Pedido {
+    private final int idPedido;
     private final List<Computadora> computadoras;
-    private static int contadorOrdenes;
+    private static int contadorPedidos;
 
-    public Orden(){
+    public Pedido(){
         computadoras = new ArrayList<>();
-        this.idOrden = ++contadorOrdenes;
+        this.idPedido = ++contadorPedidos;
     }
 
     public void agregarComputadora(Computadora computadora){
@@ -19,7 +19,7 @@ public class Orden {
     }
 
     public void mostrarOrden(){
-        System.out.println("Orden #: " + idOrden);
+        System.out.println("Pedido #: " + idPedido);
         System.out.println("Total computadoras: " + computadoras.size());
         computadoras.forEach(System.out::println);
     }
